@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- выводим заголовок -->
+    <title>Pikadu - main</title>
+    <!-- подключаем normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- подключаем стили -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- создаем шапку сайта -->
+</body>
+<header class="header">
+    <div class="header-wrapper">
+        <a href="/" class="header-logo"><img class="header-logo-image" src="img/logo.svg" alt="logo: Pikadu"></a>
+        <nav class="header-nav">
+            <ul class="header-menu">
+                <li class="header-menu-item"><a href="#" class="header-menu-link">Свежее</a></li>
+                <li class="header-menu-item"><a href="#" class="header-menu-link">Лучшее</a></li>
+                <li class="header-menu-item"><a href="#" class="header-menu-link">Горячее</a></li>
+                <li class="header-menu-item"><a href="#" class="header-menu-link">Подписки</a></li>
+            </ul>
+        </nav>
+        <div class="input-group search">
+            <input type="search" class="search-input" placeholder="Поиск по сайту">
+            <button class="search-button">
+                <img src="img/search.svg" alt="icon: search" class="search-icon">
+            </button>
+        </div>
+        <!-- /.input-group -->
+        <a href="#" class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a> <!-- /.menu-toggle -->
+    </div>
+    <!-- /.header-wrapper обёртка -->
+</header>
+
+<div class="content">
+    <main class="posts">
+        <!--первый пост-->
+        <section class="post">
+            <div class="post-body">
+                <h2 class="post-title">Для чайников</h2>
+                <p class="post-text">
+                    HTML (от англ. HyperText Markup Language — «язык разметки гипертекста»;) — стандартный язык разметки
+                    документов во Всемирной паутине. Большинство веб-страниц создаются при помощи языка HTML (или
+                    XHTML). Язык HTML
+                    интерпретируется браузерами и отображается в виде документа в удобной для человека форме.</p>
+                <p class="post-text">
+                    CSS (англ. Cascading Style Sheets — каскадные таблицы стилей) — формальный язык описания внешнего
+                    вида документа,написанного с использованием языка разметки. Преимущественно используется как
+                    средство описания,
+                    оформления внешнего вида веб-страниц, написанных с помощью языков разметки HTML и XHTML, но может
+                    также применяться к
+                    любым XML-документам,например, к SVG или XUL.</p>
+                <p class="post-text">
+                    Грубо говоря, HTML — это то, что должно быть на сайте, а CSS отвечает за то, как оно должно
+                    выглядеть. Именно благодаря CSS мы видим различные эффекты, анимации и прочие вкусности на сайтах.
+                </p>
+                <div class="tags">
+                    <a href="#" class="tag">#язык разметки</a>
+                    <a href="#" class="tag">#css</a>
+                    <a href="#" class="tag">#полезное</a>
+                    <a href="#" class="tag">#структура сайта</a>
+                    <a href="#" class="tag">#легко</a>
+                </div>
+                <!-- /.tags -->
+            </div>
+            <!-- /.post-body -->
+
+            <!--блок под лайки,комментарии, поделиться-->
+            <div class="post-footer">
+                <div class="post-buttons">
+                    <button class="post-button likes">
+                        <!-- в icons.svg хранятся Like,cooment,save,share-->
+                        <svg width="19" height="20" class="icon icon-like">
+                            <!--icon-like - уникальный класс-->
+                            <use xlink:href="img/icons.svg#like"></use>
+                        </svg>
+                        <span class="likes-counter">50</span>
+                    </button>
+                    <button class="post-button comments">
+                        <svg width="21" height="21" class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comments"></use>
+                        </svg>
+                        <span class="comments-counter">15</span>
+                    </button>
+                    <button class="post-button save">
+                        <svg width="19" height="19" class="icon icon-save">
+                            <use xlink:href="img/icons.svg#save"></use>
+                        </svg>
+                    </button>
+                    <button class="post-button share">
+                        <svg width="17" height="19" class="icon icon-share">
+                            <use xlink:href="img/icons.svg#share"></use>
+                        </svg>
+                    </button>
+                </div>
+                <!-- /.post-buttons -->
+                <div class="post-author">
+                    <div class="author-about">
+                        <a href="" class="author-username">ekaterina</a>
+                        <span class="post-time">5 минут назад</span>
+                    </div>
+                    <a href="" class="author-link"><img src="img/avatar.jpg" alt="avatar" class="author-avatar"></a>
+                </div>
+                <!-- /.post-author -->
+            </div>
+        </section>
+
+        <!--второй пост-->
+        <section class="post">
+            <div class="post-body">
+                <h2 class="post-title">WHO IS веб-дизайнер?</h2>
+                <p class="post-text">
+                    Профессия web–дизайнера появилась только с возникновением мировой компьютерной сети World Wide Web
+                    (WWW), в которой возможно создание web–сайтов в рекламных целях (конец 1980-х — начало 1990-х
+                    годов). Web-дизайнер —
+                    это человек,обладающий художественным вкусом и знаниями интернет-технологий, который создает
+                    Web-страницы и
+                    объединяет их в Web-сайты.</p>
+                <p class="post-text">
+                    Web-дизайнер отвечает за то, как выглядит и воспринимается Интернет-сайт. Он придумывает логотипы,
+                    баннеры и другие элементы графики, продумывает навигацию по сайту, определяет, где следует
+                    разместить текст.
+                    Дизайнеру необходимо не только создавать интересный сайт, но и учитывать время его загрузки.
+                    Создание интерактивных
+                    web-сайтов — высший пилотаж web-дизайна.
+
+                    Чтобы сделать такой сайт, web-дизайнер должен не только владеть языком HTML и обладать
+                    художественным чутьем, но и просто обязан знать «классическое» программирование и разбираться в
+                    базах данных.</p>
+                <p class="post-text">
+                    В процессе работы web-дизайнер решает следующие задачи, от которых в будущем непосредственно зависит
+                    успешность создаваемого проекта:
+                    <br>
+                    <br>-определение целей и задач посетителей сайта;
+                    <br>-проектирование и планирование структуры сайта;
+                    <br>-разработка интерфейса;
+                    <br>-разработка навигации;
+                    <br>-забота о взаимодействии пользователя с системой;
+                    <br>-подготовка содержания и контроль его качества.</p>
+                <div class="tags">
+                    <a href="#" class="tag">#веб-дизайн</a>
+                    <a href="#" class="tag">#инересно</a>
+                    <a href="#" class="tag">#IT</a>
+                    <a href="#" class="tag">#мотивация</a>
+                    <a href="#" class="tag">#html</a>
+                    <a href="#" class="tag">#css</a>
+                </div>
+                <!-- /.tags -->
+            </div>
+            <!-- /.post-body -->
+            <!--блок под лайки,комментарии, поделиться-->
+            <div class="post-footer">
+                <div class="post-buttons">
+                    <button class="post-button likes">
+                        <!-- в icons.svg хранятся Like,cooment,save,share-->
+                        <svg width="19" height="20" class="icon icon-like">
+                            <!--icon-like - уникальный класс-->
+                            <use xlink:href="img/icons.svg#like"></use>
+                        </svg>
+                        <span class="likes-counter">20</span>
+                    </button>
+                    <button class="post-button comments">
+                        <svg width="21" height="21" class="icon icon-comment">
+                            <use xlink:href="img/icons.svg#comments"></use>
+                        </svg>
+                        <span class="comments-counter">300</span>
+                    </button>
+                    <button class="post-button save">
+                        <svg width="19" height="19" class="icon icon-save">
+                            <use xlink:href="img/icons.svg#save"></use>
+                        </svg>
+                    </button>
+                    <button class="post-button share">
+                        <svg width="17" height="19" class="icon icon-share">
+                            <use xlink:href="img/icons.svg#share"></use>
+                        </svg>
+                    </button>
+                </div>
+                <!-- /.post-buttons -->
+                <div class="post-author">
+                    <div class="author-about">
+                        <a href="" class="author-username">pikachu</a>
+                        <span class="post-time">3 минут назад</span>
+                    </div>
+                    <a href="" class="author-link"><img src="img/avatar.jpg" alt="avatar" class="author-avatar"></a>
+
+                </div>
+                <!-- /.post-author -->
+            </div>
+        </section>
+    </main>
+    <aside class="sidebar">
+        <div class="user">
+            <a href="#" class="user-info">
+                <img width="40" height="40" src="img/avatar.jpg" alt="photo: user" class="user-avatar"><span
+                    class="user-name">ekaterina</span>
+            </a>
+            <!-- /.user-info -->
+            <a href="#" class="exit"></a>
+            <svg class="icon icon-exit">
+                <use xlink:href="img/icons.svg#exit"></use>
+            </svg>
+            </a>
+            <!-- /.exit -->
+        </div>
+        <!-- /.user -->
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link active">Ответы</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Комментарии</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Оценки</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Сохраненное</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Подписки</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Заметки</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">Игнор-лист</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="new-post.html" class="button button-new-post">
+            <svg class="icon icon-fire">
+                <use xlink:href="img/icons.svg#fire"></use>
+            </svg>
+            Опубликовать пост
+        </a>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Комментарий дня</h2>
+            </div>
+            <div class="card-body">
+                <a href="#" class="card-body-title">Как обмануть банкомат, если вы
+                    хотите снять больше наличных</a>
+                <p class="card-text">Таким образом укрепление и развитие структуры требуют от нас анализа форм развития.
+                    Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа
+                    позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же
+                    консультация...</p>
+            </div>
+        </div>
+        <!-- /.card -->
+        <a href="#" class="promo"></a>
+    </aside>
+</div>
+<script src="js/main.js"></script>
+
+</html>

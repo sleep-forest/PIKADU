@@ -1,0 +1,510 @@
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"),
+       url("../fonts/SFProDisplay-Regular.woff") format("woff"),
+       url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"),
+       url("../fonts/SFProDisplay-Semibold.woff") format("woff"),
+       url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: bold;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'SFProDisplay-Regular', sans-serif;/*подключаем шрифт без засечек*/
+     background-color:#E5E5E5;
+}
+.header{
+    background: #FA8C16;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 30px;
+    box-shadow:0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-wrapper{
+    /* border:1px solid black; */
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;/*автоматическое высчитывание отступов*/
+    display: flex;
+    justify-content: space-between; /*разбивает логотип, поиск, список по областям: слева -центр-правый верхний угол*/
+    align-items: center;/*все элементы выравниваются по середине*/
+    
+}
+.header-nav{
+    margin-left: 60px;/*отступ от pikadu до свежее*/
+    margin-right: auto;/*авт.высчитывается отступ от подписок до поиска по сайту*/
+
+}
+.header-menu{
+    display: flex;/*свежее-лучшее-горячее-подписки выравниваются в одну строку*/
+    list-style: none;/*убираем точки списка*/
+    padding: 0;/*убираем отступы*/
+    margin: 0;/*убираем отступы*/
+
+}
+.header-menu-link{
+text-decoration: none;/*убираем подчеркивание, отключаем декорацию текста*/
+color: #FAFAFA;
+margin-right: 15px;/*указывает отступы между списком*/
+font-size: 14px;/*размер текста*/
+line-height: 22px;/*высота строки, расстояние между строками*/
+}
+.input-group{
+    max-width: 237px;/*указываем ширину*/
+    width: 60%;
+    height: 32px;/*указываем высоту блока search*/
+    position: relative;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;/*ничего не выпадает из блока search*/
+    border: 1px solid #D9D9D9;
+}
+.search-input{
+    height: 100%;
+    width: 80%;
+    border:none;/*отключаем обводку*/
+    font-size: 14px;
+    line-height: 22px;
+    padding: 12px;
+}
+.search-button{
+    border:none;
+    background-color:white;
+    cursor: pointer;/*меняем курсор на руку*/
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;/*устанавливаем иконку лупа посередине seacrh-button*/
+
+}
+.search-input::-moz-placeholder{ color: #BFBFBF;}
+.search-input::-webkit-input-placeholder{color: #BFBFBF;}
+.search-input::-ms-input-placeholder{color: #BFBFBF;}
+.search-input::placeholder{color:#BFBFBF;} 
+
+.menu-toggle{
+    display: none;
+}
+
+.content{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    display: flex;/*85-87 перемещаем sidebar  в верхний правый угол*/
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.posts{
+   
+    width: 67%; /*выравниваем ширину блока поста не больше 800px*/
+}
+
+.post{
+       background-color: #fff;
+       border: 1px solid #E8E8E8;
+       margin-bottom: 30px;/*расстояние между 1 и 2 постами*/
+}
+.post-body{
+    padding-top: 35px;/*устанавливаем отступы для заголовка поста*/
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 0;
+}
+.post-title{
+    font-family: "SFProDisplay-Regular", sans-serif;
+    margin-top: 0;/*убираем верхний отступ*/
+    margin-bottom: 19px;/*отступ вниз*/
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.post-text{
+    color: #262626;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+.tags{
+    margin-bottom: 22px;/*Отодвигаем блок с кнопками вниз на 22px*/
+}
+.tag{
+    color: #BFBFBF;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+}
+.post-footer{
+    background: #FAFAFA;
+    border-top: 1px solid #E8E8E8;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+}
+.post-buttons{
+    display: flex;
+    align-items: center;/*выстраиваем иконки в ряд*/
+  
+}
+.post-button .icon{
+    fill:#8c8c8c;
+
+}
+.icon-like, .icon-comment{
+    margin-right: 6px;/*Отступ м\у иконкой и счетчиком*/
+    
+}
+.post-button{
+    background-color:transparent; /*прозрачный фоновый цвет*/
+    border: none;
+    color: #8C8C8C;/*цвет иконок*/
+    display: flex;
+    align-items:center;/*выравнивание иконок относительно счетчика*/
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 19px;/*расстояние м\у кнопками*/
+    cursor: pointer;
+}
+.post-author{
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+}
+.author-avatar{
+    width: 34px;
+    height: 34px;
+    margin-left: 9px;
+    border-radius: 4px;
+}
+.author-username{
+    display: block;/*передвигает текст "5 мин назад" под автора*/
+    color: #8C8C8C;
+    font-size: 12px;
+    line-height: 20px;
+    text-decoration: none;
+
+}
+.post-time{
+    color: #BFBFBF;
+    font-size: 12px;
+    line-height: 20px;
+}
+.post-text{
+    text-align: justify;/*выравнивание текста по ширине*/
+}
+.sidebar{
+    width: 31%;/*указываем ширину в % чтобы подогнать под нужный размер sidebar*/
+}
+.user{
+    background-color: #FAFAFA;
+    border: 1px solid #E8E8E8;
+    padding: 15px 25px;/*делаем отступы по краям*/
+    display: flex;/*198-199 выравниваем иконку exit*/
+    align-items: center;
+    justify-content: space-between;/*отодвигаем exit к краю блока*/
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.user-avatar{
+    border-radius: 50%;/*скругляем аватар*/
+    margin-right: 17px;
+}
+.user-name{
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+.icon-exit{
+    width: 20px;
+    height: 20px;
+    fill:#000;
+}
+
+.sidebar-nav{
+    background-color: #fff;
+}
+.sidebar-menu{
+    margin: 0;
+    border: 1px solid #E8E8E8;
+    border-top: none;
+    list-style-type: none;/*убираем точки списка */
+    padding: 0;
+}
+.sidebar-menu-link{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+    padding: 16px 48px;/*Отступы*/
+    display: inline-block;/*делаем ссылки не строчными, а блочными, чтобы был отступ сверху*/
+    width: 100%;
+    background-color: #fff;
+
+}
+.sidebar-menu-link:hover{
+    background-color: #FFFBE6;/*цвет ссылки при наведении курсора*/
+}
+.sidebar-menu-link.active{/*выделение активного пункта меню*/
+    background-color: #FFFBE6;
+    border-right: 3px solid #FAAD14;;
+}
+.button{
+    background: #FAAD14;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px;
+    border:none;
+    cursor: pointer;
+}
+.button-new-post{
+    display: flex;/*делаем ссылку блочной*/
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;/*Отсутп от sidebar*/
+}
+.icon-fire{
+    fill: #fff;
+    width: 11px;
+    height: 13px;
+    margin-right: 10px;/*Отодвигаем справа на 10px*/
+}
+.card{
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    margin-top: 20px;
+
+}
+.card-header{
+    background: #FAFAFA;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 23px 25px;
+}
+.card-title{
+    margin: 0;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+.card-body{
+    padding: 22px 40px 20px 25px;
+}
+.card-body-title{
+    margin: 0 0 10px;
+    text-decoration: none;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #D48806;
+}
+.card-text{
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+color: #262626;
+margin: 10px 0;
+}
+.promo{
+    display: block;
+    background: #fff  url('../img/promo.jpg') no-repeat center center / cover;
+    /*cover-покрывает всю площадь */
+    width: 100%;
+    height: 260px;
+    border-bottom: 1px solid #E8E8E8;
+    margin-top: 20px;
+    position: relative;
+}
+.promo::before{/*псевдоэлемент*/
+    content: "Реклама";
+    position: absolute;
+    right: 0;/*убираем рекламу в правый верхний угол*/
+    top: 0;
+    background: #C4C4C4;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*----------для второй страницы-----------------*/
+.add-post{
+    display: flex;
+    flex-direction: column;
+
+}
+.add-title, .add-text{
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    padding: 23px 30px;
+    margin-bottom: 16px;
+}
+.add-text{
+    min-height: 362px;
+
+}
+.button-outline{
+    background: #FFFFFF;
+    border: 1px solid #FFC53D;
+    border-radius: 4px;
+    color: #FFC53D;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+}
+.button-outline .icon{
+    width: 14px;
+    height: 11px;
+    fill: #FFC53D;
+}
+.add-button{
+    max-width: 100%;
+    width: 370px;
+    margin-right: 2%;
+}
+.add-post .button-outline{
+    margin-right: 1%;
+}
+
+@media (max-width: 676px){
+    .add-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .add-button{
+        width: 100%;
+        min-width: 100%;
+    }
+    .add-post .button-outline{
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+/*-----для второй страницы конец ---------*/
+
+
+@media(max-width:990px){ /*если экран меньше 990px*/
+    .menu-toggle{
+        display: flex;/*появится если экран меньше 990*/
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        margin-left: 12px;
+
+    }
+    .menu-toggle span{
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+    }
+    .header{/*прокручиваем шапку*/
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+    .content{
+        margin-top: 94px;/*заголовок оказался под шапкой, поэтому отодвигаем его 64+30*/
+        margin-bottom: 40px;/*60*/
+    }
+    .sidebar{
+        position: fixed;
+        z-index: 101;
+        top: 64px;/*отодвигаем от шапки*/
+        right: 0;
+        bottom: 0;
+        height: calc(100% - 64px);
+        /*height: 81.5%;*/
+        max-width: 320px;
+        width: 100%;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);
+        transition: transform 0.2s;
+        overflow-y: auto;/*прокручивается sidebar*/
+    }
+    .sidebar.visible{
+        transform: translateX(0);
+    }
+    .posts{
+    width: 100%;
+    }
+    .header-nav { /*шапка будет внизу*/
+        display: none;
+       /* margin-left: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #FA8C16;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 0px;/*30*/
+        /*padding-left: 35px;
+        padding-right: 35px;
+        box-shadow:0px 2px 8px rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;*/
+    }
+    .header-menu{
+        width: 90%;
+        margin: auto;
+    } 
+}
+
+@media(max-width:576px){
+.post-footer{/*Элементы подвала в ряд*/
+        flex-direction: column;
+    }
+    .post-author{
+        margin-top: 15px;
+    }
+    .author-avatar{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .author-about{
+        order: 2;/*меняем местами автора и аватар*/
+        text-align: left;
+    }
+
+
+    /*------Для второй страницы----*/
+
+    .add-button{
+    width: 100%;
+}
+}
