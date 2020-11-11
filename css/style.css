@@ -209,7 +209,81 @@ line-height: 22px;/*высота строки, расстояние между �
 .sidebar{
     width: 31%;/*указываем ширину в % чтобы подогнать под нужный размер sidebar*/
 }
+/*---------------------------new---------------------------*/
+
+.login{
+    background-color: #FAFAFA;
+    border: 1px solid #E8E8E8;
+    padding: 15px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-title{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #595959;
+}
+
+.login-input{
+    display: block;
+    background-color: #fff;
+    border:1px solid #E8E8E8;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+
+.login-forget{
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+    color:#757575;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.login-signin{
+    color: #595959;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    background-color:#FA8C16;
+    border:none;
+    border-radius:2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 32px;
+}
+
+.login-signin:hover{
+    filter: opacity(80%);
+
+}
+.login-signin:active{
+    filter: brightness(85%);
+}
+
+.login-signup{
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    color:#FA8C16;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 15px;
+    text-transform: uppercase;
+    line-height: 32px;
+}
+
+
 .user{
+   /* display: flex;*/
     background-color: #FAFAFA;
     border: 1px solid #E8E8E8;
     padding: 15px 25px;/*делаем отступы по краям*/
@@ -239,6 +313,7 @@ line-height: 22px;/*высота строки, расстояние между �
 }
 
 .sidebar-nav{
+    display: none;
     background-color: #fff;
 }
 .sidebar-menu{
@@ -282,7 +357,7 @@ line-height: 22px;/*высота строки, расстояние между �
     cursor: pointer;
 }
 .button-new-post{
-    display: flex;/*делаем ссылку блочной*/
+    display: none ;/*делаем ссылку блочной*/
     align-items: center;
     justify-content: center;
     width: 100%;
